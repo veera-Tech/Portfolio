@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link lang="javascript" href="main.js" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="container">
+      <nav>
+        <h1 class="siva"><span class="s">s</span>iva</h1>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">My work</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>FULL STACK DEVELOPER</p>
+        <h1>Hi,I'am <span>Veerasiva</span> from India</h1>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img class="img" src="img.jpeg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              Hi, I'm veera siva.s, a graduate in Chemistry from Devanga Arts
+              College, now transitioning into the tech world with a strong
+              passion for Full Stack Development. <br />Currently, I'm mastering
+              web technologies to bring ideas to life—whether it's building
+              seamless e-commerce websites or designing creative personal
+              portfolios. My goal is to blend problem-solving skills with modern
+              technology to create impactful and user-friendly web solutions.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                skills
+              </p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>programming language :</span><br />Java</li>
+                <li>
+                  <span>web Development : </span><br />Html,css,javascript
+                </li>
+                <li><span>Data base : </span><br />sql,mongo dp</li>
+                <li><span>Tools : </span><br />Git,Maven,Jenkins</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>2021-2024</span><br />Devenga Arts College<br />BSC-66%
+                </li>
+                <li>
+                  <span>2020-2021 </span><br />Goverment Higher secondary
+                  school<br />HSC-75%
+                </li>
+                <li>
+                  <span>2018-2019 </span><br />Goverment Higher secondary school
+                  <br />
+                  SSLC-60%
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="web.png" />
+            <div class="layer">
+              <h3>Fashin E-commercs website</h3>
+              <p>
+                It is basic e-commerce website using html,css,and javascript
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="web1.png" />
+            <div class="layer">
+              <h3>My portfolio</h3>
+              <p>Portfolio website for me</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="web2.png" />
+            <div class="layer">
+              <h3>website</h3>
+              <p>Basic website home page</p>
+            </div>
+          </div>
+        </div>
+        <a href="" class="btn">See more</a>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p>Email : Veerasiva984@gmail.com</p>
+            <p>Contact No: 8838902281</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/veera-siva7/"
+                ><img src="icon.png" alt="" style="height: 35px; width: 35px"
+              /></a>
+              <a href="https://github.com/veera-Tech"
+                ><img src="icon1.png" alt="" style="height: 40px; width: 40px"
+              /></a>
+              <a
+                href="https://www.canva.com/design/DAGZhcwexvE/ZgY-qkGFdCf-GT0YnJoHiQ/view"
+                class="resume2"
+                ><h1 class="resume1"><span class="resume">R</span>esume</h1></a
+              >
+            </div>
+            <a href="" class="btn btn2">Download cv</a>
+          </div>
+          <div class="contact-rigth">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>copyright @Veerasiva</p>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
